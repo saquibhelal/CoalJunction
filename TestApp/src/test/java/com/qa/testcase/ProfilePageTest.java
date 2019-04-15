@@ -13,6 +13,8 @@ public class ProfilePageTest extends TestBase{
 
 	LoginPage loginPage;
 	ProfilePage prfPage;
+	ExcelDataConfig excel=new ExcelDataConfig("D:\\CoalJunction\\TestApp\\src\\main\\java\\com\\qa\\testdata\\CoalTestData2.xlsx");
+	
 	
 	
 	public ProfilePageTest(){

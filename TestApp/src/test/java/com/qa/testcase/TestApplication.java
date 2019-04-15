@@ -27,8 +27,5 @@ public class TestApplication {
 	  // System.out.println(data);
 	}
 	
-	public String getData(String sheetname,int row,int col){
-		sheet1.
-	}
-
+	
 }
