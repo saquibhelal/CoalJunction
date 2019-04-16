@@ -1,29 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24269" started-at="2019-04-15T17:32:18Z" finished-at="2019-04-15T17:32:42Z">
+  <suite name="Default suite" duration-ms="13203" started-at="2019-04-16T17:27:45Z" finished-at="2019-04-16T17:27:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24269" started-at="2019-04-15T17:32:18Z" finished-at="2019-04-15T17:32:42Z">
-      <class name="com.qa.testcase.ProfilePageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testcase.ProfilePageTest@754ba872]" name="setUp" is-config="true" duration-ms="17547" started-at="2019-04-15T17:32:18Z" finished-at="2019-04-15T17:32:36Z">
+    <test name="Default test" duration-ms="13203" started-at="2019-04-16T17:27:45Z" finished-at="2019-04-16T17:27:58Z">
+      <class name="com.qa.testcase.LoginPageNegativeTest">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.qa.testcase.LoginPageNegativeTest@754ba872]" name="setUp" is-config="true" duration-ms="13149" started-at="2019-04-16T17:27:45Z" finished-at="2019-04-16T17:27:58Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [The transaction password you entered is incorrect. ] but found [The transaction password you entered is incorrect.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [The transaction password you entered is incorrect. ] but found [The transaction password you entered is incorrect.]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at com.qa.pages.LoginPageNegative.loginOper(LoginPageNegative.java:49)
+at com.qa.testcase.LoginPageNegativeTest.setUp(LoginPageNegativeTest.java:23)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="userProfileValidateTest()[pri:1, instance:com.qa.testcase.ProfilePageTest@754ba872]" name="userProfileValidateTest" duration-ms="4022" started-at="2019-04-15T17:32:36Z" finished-at="2019-04-15T17:32:40Z">
+        <test-method status="SKIP" signature="loginPageTest()[pri:0, instance:com.qa.testcase.LoginPageNegativeTest@754ba872]" name="loginPageTest" duration-ms="0" started-at="2019-04-16T17:27:58Z" finished-at="2019-04-16T17:27:58Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [The transaction password you entered is incorrect. ] but found [The transaction password you entered is incorrect.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [The transaction password you entered is incorrect. ] but found [The transaction password you entered is incorrect.]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at com.qa.pages.LoginPageNegative.loginOper(LoginPageNegative.java:49)
+at com.qa.testcase.LoginPageNegativeTest.setUp(LoginPageNegativeTest.java:23)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- userProfileValidateTest -->
-        <test-method status="PASS" signature="profileTest()[pri:2, instance:com.qa.testcase.ProfilePageTest@754ba872]" name="profileTest" duration-ms="1892" started-at="2019-04-15T17:32:40Z" finished-at="2019-04-15T17:32:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- profileTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.testcase.ProfilePageTest@754ba872]" name="tearDown" is-config="true" duration-ms="718" started-at="2019-04-15T17:32:42Z" finished-at="2019-04-15T17:32:42Z">
+        </test-method> <!-- loginPageTest -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:com.qa.testcase.LoginPageNegativeTest@754ba872]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-04-16T17:27:58Z" finished-at="2019-04-16T17:27:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.testcase.ProfilePageTest -->
+      </class> <!-- com.qa.testcase.LoginPageNegativeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

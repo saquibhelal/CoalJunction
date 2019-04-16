@@ -25,8 +25,7 @@ public class TestBase {
 		
 		try{
 			Pro=new Properties();
-			FileInputStream fis=new FileInputStream("D:\\CoalAutomationWorkspace\\"
-					+ "TestApp\\src\\main\\java\\com\\qa\\config\\config.properties");
+			FileInputStream fis=new FileInputStream("D:\\CoalJunction\\TestApp\\src\\main\\java\\com\\qa\\config\\config2.properties");
 			Pro.load(fis);
 			
 		}
