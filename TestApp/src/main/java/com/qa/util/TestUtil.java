@@ -20,7 +20,7 @@ public class TestUtil extends TestBase {
 	public static long PAGE_LOAD_TIMEOUT= 25;
 	public static long IMPLICIT_WAIT= 20;
 	
-	public static String TESTDATA_SHEET_PATH="D:\\CoalAutomationWorkspace\\TestApp\\src\\main\\java\\com\\qa\\testdata\\CoalTestData.xlsx";
+	public static String TESTDATA_SHEET_PATH="D:\\CoalJunction\\TestApp\\src\\main\\java\\com\\qa\\testdata\\TestCoalData.xlsx";
 	
 	
 	public static Workbook book;
@@ -44,12 +44,17 @@ public class TestUtil extends TestBase {
 		   e.printStackTrace();
 		}catch(IOException e){
 			e.printStackTrace();
+			
 		}
+		System.out.println("====sheet===="+sheet);
 		sheet=book.getSheet(sheetName);
 		int y=sheet.getLastRowNum();
+		System.out.println(y);
 		int p=sheet.getRow(0).getLastCellNum();
+		System.out.println(p);
 		Object[][] data=new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
 		int x=sheet.getLastRowNum();
+		System.out.println(x);
 		for(int i =0; i< sheet.getLastRowNum();i++){
 			for(int k=0;k<sheet.getRow(0).getLastCellNum();k++){
 				data[i][k]= sheet.getRow(i+1).getCell(k).toString();

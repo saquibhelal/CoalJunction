@@ -1,5 +1,6 @@
 package com.qa.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -22,7 +23,11 @@ public class BiddingScreen extends TestBase {
 	}
 
 	public void bidingScreenInput(String qunty, String prce) {
+		
+		driver.findElement(By.xpath("//input[@name='quantity']")).click();;
+		//quantity.click();
 		quantity.sendKeys(qunty);
+		price.click();
 		price.sendKeys(prce);
 		bidSubmit.click();
 		bidSubmit.getText();

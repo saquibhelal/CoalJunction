@@ -1,5 +1,6 @@
 package com.qa.testcase;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -14,7 +15,7 @@ public class BiddingScreenTest extends TestBase {
 
 	LoginPage loginPage;
 	BiddingScreen bdScreen;
-	String sheetName="Bid";
+	String sheetName="Sheet1";
 	
 	
 	public BiddingScreenTest(){
@@ -22,10 +23,11 @@ public class BiddingScreenTest extends TestBase {
 	}
 	
 	@BeforeClass
-	public void setUp(){
+	public void setUp() throws InterruptedException{
 		initializationBrowser();
 		loginPage= new LoginPage();
-		loginPage.loginOperation(Pro.getProperty("username"), Pro.getProperty("password"));
+		bdScreen = new BiddingScreen();
+		loginPage.loginOperation(Pro.getProperty("username"), Pro.getProperty("password"));		
     }
 	
 	@DataProvider
@@ -35,9 +37,11 @@ public class BiddingScreenTest extends TestBase {
 }
 	@Test(dataProvider="getCoalTestDataSheet")
 	public void biddingScreenTest(String quanty,String prc){
+		System.out.println("quanty: "+quanty+" " +"prc: "+prc);
 		bdScreen.bidingScreenInput(quanty, prc);
 		
 	}
+	
 	
 
 	@AfterClass

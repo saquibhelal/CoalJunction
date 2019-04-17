@@ -22,7 +22,7 @@ public class ProfilePageTest extends TestBase{
 	}
 	
 	@BeforeClass
-	public void setUp(){
+	public void setUp() throws InterruptedException{
 		initializationBrowser();
 		loginPage= new LoginPage();
 		prfPage=new ProfilePage();
