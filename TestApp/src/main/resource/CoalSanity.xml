@@ -3,7 +3,7 @@
 <suite thread-count="2" name="Coal Application Automation Test Suite"parallel="classes">
 
 	 <listeners>
-		<listener class-name="com.qa.base.ExtentReporterNG" />
+		<listener class-name="com.qa.ExtentReporterListener.ExtentReporterNG" />
 	</listeners>
 
 	<test name="CoalTest">

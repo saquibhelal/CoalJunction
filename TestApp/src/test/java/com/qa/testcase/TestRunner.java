@@ -2,8 +2,6 @@ package com.qa.testcase;
 
 import org.testng.TestNG;
 
-import com.qa.base.ExtentReporterNG;
-
 public class TestRunner {
 
 	static TestNG testNg;
