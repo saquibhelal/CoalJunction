@@ -22,13 +22,13 @@ public class BiddingScreenTest extends TestBase {
 		super();
 	}
 	
-	@BeforeClass
+	/*@BeforeClass
 	public void setUp() throws InterruptedException{
 		initializationBrowser();
 		loginPage= new LoginPage();
 		bdScreen = new BiddingScreen();
 		loginPage.loginOperation(Pro.getProperty("username"), Pro.getProperty("password"));		
-    }
+    }*/
 	
 	@DataProvider
 	public Object[][] getCoalTestDataSheet(){
@@ -36,17 +36,18 @@ public class BiddingScreenTest extends TestBase {
 		return data;
 }
 	@Test(dataProvider="getCoalTestDataSheet")
-	public void biddingScreenTest(String quanty,String prc){
+	public void biddingScreenTest(String quanty,String prc) throws InterruptedException{
 		System.out.println("quanty: "+quanty+" " +"prc: "+prc);
+		bdScreen=new BiddingScreen();
 		bdScreen.bidingScreenInput(quanty, prc);
 		
 	}
 	
 	
 
-	@AfterClass
+	/*@AfterClass
 	public void tearDown(){
 		System.out.println("======Browser is shutting down=====\n");
 		 driver.quit();
-    }
+    }*/
 }

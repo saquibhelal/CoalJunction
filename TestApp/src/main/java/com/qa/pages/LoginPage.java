@@ -5,10 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.qa.base.HighLightElement;
 import com.qa.base.TestBase;
 
 public class LoginPage extends TestBase {
 
+	
 	@FindBy(xpath="//input[@name='userid']")
 	WebElement userName;
 	
@@ -36,6 +38,11 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath="//p/font[text()='The transaction password you entered is correct. ']")
 	WebElement txSuccessMsg;
 	
+	@FindBy(xpath="//input[@value='Reset']")
+	WebElement reset;
+	
+	
+	
 	
 	public LoginPage(){
 		PageFactory.initElements(driver, this);
@@ -44,13 +51,23 @@ public class LoginPage extends TestBase {
 	public void loginOperation(String usNm,String ps) throws InterruptedException{
 		
 		boolean xyz = false; 
+		HighLightElement.highLightElement(driver, userName);
 		userName.sendKeys(usNm);
+		HighLightElement.highLightElement(driver, pass);
 		pass.sendKeys(ps);
+		HighLightElement.highLightElement(driver, submitBtn);
 		submitBtn.click();
+		HighLightElement.highLightElement(driver, bidingLink);
 		bidingLink.click();
-		//tranPas.sendKeys("Txpassword"); 
-		//submit.click();
-		
+		HighLightElement.highLightElement(driver, tranPas);
+		tranPas.sendKeys("password1");
+		//reset.click();
+		Thread.sleep(3000);
+		//tranPas.sendKeys("password1");
+		HighLightElement.highLightElement(driver, submit);
+	    submit.click();
+	    HighLightElement.highLightElement(driver, btnLnk);
+	    btnLnk.click();
 		/*try{
 			if(errorMsg.isDisplayed())
 				  System.out.println("You enter wrong password");				 
@@ -77,7 +94,7 @@ public class LoginPage extends TestBase {
 		
 	}
 	
-	public boolean validateError(String txPassword){
+	/*public boolean validateError(String txPassword){
 		boolean xyz = false;
 		tranPas.sendKeys(txPassword); 
 		submit.click();	
@@ -116,6 +133,6 @@ public class LoginPage extends TestBase {
 		
 		return xyz;
 	}
-		
+		*/
 	
 }

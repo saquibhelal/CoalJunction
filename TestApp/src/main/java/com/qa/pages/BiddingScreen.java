@@ -12,26 +12,24 @@ public class BiddingScreen extends TestBase {
 	@FindBy(xpath="//input[@name='quantity']")
 	WebElement quantity;
 	
-	@FindBy(xpath="//input[@name='price']")
+	@FindBy(xpath="//input[@name='rate']")
 	WebElement price;
 	
-	@FindBy(xpath="//input[@value='Submit']")
+	@FindBy(xpath="//tr[3]//td[7]//input[2]")
 	WebElement bidSubmit;
 	
 	public BiddingScreen(){
 		PageFactory.initElements(driver, this);
 	}
 
-	public void bidingScreenInput(String qunty, String prce) {
-		
-		driver.findElement(By.xpath("//input[@name='quantity']")).click();;
-		//quantity.click();
+	public void bidingScreenInput(String qunty, String prce) throws InterruptedException {
+		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@name='bidOnAuctions']")));
+		Thread.sleep(2000);
 		quantity.sendKeys(qunty);
-		price.click();
-		price.sendKeys(prce);
+		//price.sendKeys(prce);
 		bidSubmit.click();
-		bidSubmit.getText();
-		System.out.println(bidSubmit);
+		Thread.sleep(7000);
+		
 		
 	}
 }

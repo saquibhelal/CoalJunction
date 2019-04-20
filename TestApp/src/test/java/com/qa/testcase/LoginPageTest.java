@@ -23,7 +23,7 @@ public class LoginPageTest extends TestBase{
 		loginPage.loginOperation(Pro.getProperty("username"), Pro.getProperty("password"));
     }
 	
-	@Test(priority=2)
+	/*@Test(priority=2)
 	public void LoginTxTestPass(){
 		boolean result = loginPage.validateSuccess("password1");
 		Assert.assertEquals(result, true);
@@ -33,7 +33,7 @@ public class LoginPageTest extends TestBase{
 	public void LoginTxTestFail(){
 		boolean result = loginPage.validateError("password2");
 		Assert.assertEquals(result, true);
-	}
+	}*/
 	@Test
 	public void loginPageTest(){
 		//loginPage.biddingLinkOp();

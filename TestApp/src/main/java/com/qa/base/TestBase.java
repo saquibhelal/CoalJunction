@@ -10,7 +10,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
+import com.qa.pages.BiddingScreen;
+import com.qa.pages.CurrentEMD;
+import com.qa.pages.LoginPage;
 import com.qa.util.TestUtil;
 
 public class TestBase {
@@ -19,7 +24,8 @@ public class TestBase {
 	public static Properties Pro;
 	public static EventFiringWebDriver e_driver;
 	//public static WebEventListner eventListner;
-	
+	LoginPage loginPage;
+	BiddingScreen bdScreen;
 	
 	public TestBase(){
 		
@@ -70,6 +76,19 @@ public class TestBase {
 		driver.get(Pro.getProperty("url"));
 	    //driver.manage().window().maximize();
 	}
+	
+	@BeforeClass
+	public void setUp() throws InterruptedException{
+		initializationBrowser();
+		loginPage= new LoginPage();
+		bdScreen = new BiddingScreen();
+		loginPage.loginOperation(Pro.getProperty("username"), Pro.getProperty("password"));		
+    }
 
+	@AfterClass
+	public void tearDown(){
+		System.out.println("======Browser is shutting down=====\n");
+		 driver.quit();
+    }
 
 }
