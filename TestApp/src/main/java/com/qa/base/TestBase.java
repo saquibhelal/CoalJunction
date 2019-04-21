@@ -3,6 +3,9 @@ package com.qa.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -18,6 +21,9 @@ import com.qa.pages.CurrentEMD;
 import com.qa.pages.LoginPage;
 import com.qa.util.TestUtil;
 
+import atu.testrecorder.ATUTestRecorder;
+import atu.testrecorder.exceptions.ATUTestRecorderException;
+
 public class TestBase {
 	
 	public static WebDriver driver;
@@ -26,12 +32,13 @@ public class TestBase {
 	//public static WebEventListner eventListner;
 	LoginPage loginPage;
 	BiddingScreen bdScreen;
+	ATUTestRecorder recorder;
 	
 	public TestBase(){
 		
 		try{
 			Pro=new Properties();
-			FileInputStream fis=new FileInputStream("D:\\CoalJunction\\TestApp\\src\\main\\java\\com\\qa\\config\\config2.properties");
+			FileInputStream fis=new FileInputStream("D:\\CoalJunction\\TestApp\\src\\main\\java\\com\\qa\\config\\config.properties");
 			Pro.load(fis);
 			
 		}
@@ -78,7 +85,11 @@ public class TestBase {
 	}
 	
 	@BeforeClass
-	public void setUp() throws InterruptedException{
+	public void setUp() throws InterruptedException, ATUTestRecorderException{
+		 DateFormat dateFormat = new SimpleDateFormat("yy-MM-dd HH-mm-ss");
+		 Date date = new Date();
+		 recorder = new ATUTestRecorder("D:\\ScriptVideos","TestVideo-"+dateFormat.format(date),false);
+		 recorder.start(); 
 		initializationBrowser();
 		loginPage= new LoginPage();
 		bdScreen = new BiddingScreen();
@@ -86,9 +97,10 @@ public class TestBase {
     }
 
 	@AfterClass
-	public void tearDown(){
+	public void tearDown() throws ATUTestRecorderException{
 		System.out.println("======Browser is shutting down=====\n");
 		 driver.quit();
+		 recorder.stop();
     }
 
 }

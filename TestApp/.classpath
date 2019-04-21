@@ -23,5 +23,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="E:/driver/ATUTestRecorder_2.1/ATUTestRecorder_2.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

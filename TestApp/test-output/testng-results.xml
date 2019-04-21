@@ -1,67 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="82110" started-at="2019-04-20T15:07:10Z" finished-at="2019-04-20T15:08:32Z">
+  <suite name="Default suite" duration-ms="38617" started-at="2019-04-21T14:41:50Z" finished-at="2019-04-21T14:42:29Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="82110" started-at="2019-04-20T15:07:10Z" finished-at="2019-04-20T15:08:32Z">
-      <class name="com.qa.testcase.CurrentStatusScreenTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testcase.CurrentStatusScreenTest@4f4a7090]" name="setUp" is-config="true" duration-ms="13262" started-at="2019-04-20T15:08:18Z" finished-at="2019-04-20T15:08:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="postVerificationScreenTest()[pri:0, instance:com.qa.testcase.CurrentStatusScreenTest@4f4a7090]" name="postVerificationScreenTest" duration-ms="355" started-at="2019-04-20T15:08:31Z" finished-at="2019-04-20T15:08:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postVerificationScreenTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.testcase.CurrentStatusScreenTest@4f4a7090]" name="tearDown" is-config="true" duration-ms="662" started-at="2019-04-20T15:08:32Z" finished-at="2019-04-20T15:08:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.testcase.CurrentStatusScreenTest -->
-      <class name="com.qa.testcase.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testcase.LoginPageTest@5a42bbf4]" name="setUp" is-config="true" duration-ms="16409" started-at="2019-04-20T15:07:10Z" finished-at="2019-04-20T15:07:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginPageTest()[pri:0, instance:com.qa.testcase.LoginPageTest@5a42bbf4]" name="loginPageTest" duration-ms="0" started-at="2019-04-20T15:07:27Z" finished-at="2019-04-20T15:07:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginPageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.testcase.LoginPageTest@5a42bbf4]" name="tearDown" is-config="true" duration-ms="1" started-at="2019-04-20T15:07:27Z" finished-at="2019-04-20T15:07:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.testcase.LoginPageTest -->
-      <class name="com.qa.testcase.BidHistoryTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testcase.BidHistoryTest@52d455b8]" name="setUp" is-config="true" duration-ms="13282" started-at="2019-04-20T15:07:56Z" finished-at="2019-04-20T15:08:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="bidHistoryTest()[pri:0, instance:com.qa.testcase.BidHistoryTest@52d455b8]" name="bidHistoryTest" duration-ms="7749" started-at="2019-04-20T15:08:10Z" finished-at="2019-04-20T15:08:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bidHistoryTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.testcase.BidHistoryTest@52d455b8]" name="tearDown" is-config="true" duration-ms="684" started-at="2019-04-20T15:08:17Z" finished-at="2019-04-20T15:08:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.testcase.BidHistoryTest -->
+    <test name="Default test" duration-ms="38617" started-at="2019-04-21T14:41:50Z" finished-at="2019-04-21T14:42:29Z">
       <class name="com.qa.testcase.CurrentEMDTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testcase.CurrentEMDTest@270421f5]" name="setUp" is-config="true" duration-ms="15061" started-at="2019-04-20T15:07:27Z" finished-at="2019-04-20T15:07:42Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testcase.CurrentEMDTest@239963d8]" name="setUp" is-config="true" duration-ms="21919" started-at="2019-04-21T14:41:50Z" finished-at="2019-04-21T14:42:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="emdTest()[pri:0, instance:com.qa.testcase.CurrentEMDTest@270421f5]" name="emdTest" duration-ms="13916" started-at="2019-04-20T15:07:42Z" finished-at="2019-04-20T15:07:56Z">
+        <test-method status="PASS" signature="currentEMDTest()[pri:0, instance:com.qa.testcase.CurrentEMDTest@239963d8]" name="currentEMDTest" duration-ms="13816" started-at="2019-04-21T14:42:12Z" finished-at="2019-04-21T14:42:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- emdTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.testcase.CurrentEMDTest@270421f5]" name="tearDown" is-config="true" duration-ms="685" started-at="2019-04-20T15:07:56Z" finished-at="2019-04-20T15:07:56Z">
+        </test-method> <!-- currentEMDTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.testcase.CurrentEMDTest@239963d8]" name="tearDown" is-config="true" duration-ms="2826" started-at="2019-04-21T14:42:26Z" finished-at="2019-04-21T14:42:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.qa.testcase.CurrentEMDTest -->
-    </test> <!-- Command line test -->
-  </suite> <!-- Command line suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

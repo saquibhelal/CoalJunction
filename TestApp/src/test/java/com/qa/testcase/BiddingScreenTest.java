@@ -34,6 +34,7 @@ public class BiddingScreenTest extends TestBase {
 	public Object[][] getCoalTestDataSheet(){
 		Object data[][]=TestUtil.getTestData(sheetName);
 		return data;
+		
 }
 	@Test(dataProvider="getCoalTestDataSheet")
 	public void biddingScreenTest(String quanty,String prc) throws InterruptedException{

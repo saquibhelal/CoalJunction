@@ -26,9 +26,9 @@ public class BiddingScreen extends TestBase {
 		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@name='bidOnAuctions']")));
 		Thread.sleep(2000);
 		quantity.sendKeys(qunty);
-		//price.sendKeys(prce);
-		bidSubmit.click();
-		Thread.sleep(7000);
+		price.sendKeys(prce);
+		//bidSubmit.click();
+		
 		
 		
 	}
