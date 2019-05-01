@@ -13,13 +13,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import com.qa.ExtentReporterListner.ExtentReporterNG;
 import com.qa.pages.BiddingScreen;
 import com.qa.pages.CurrentEMD;
 import com.qa.pages.LoginPage;
+import com.qa.testcase.LoginPageTest;
 import com.qa.util.TestUtil;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 import atu.testrecorder.ATUTestRecorder;
 import atu.testrecorder.exceptions.ATUTestRecorderException;
@@ -32,7 +38,10 @@ public class TestBase {
 	//public static WebEventListner eventListner;
 	LoginPage loginPage;
 	BiddingScreen bdScreen;
-	ATUTestRecorder recorder;
+	//ATUTestRecorder recorder;
+	
+	public ExtentReports extent;
+	public ExtentTest extentTest;
 	
 	public TestBase(){
 		
@@ -57,7 +66,7 @@ public class TestBase {
 		
 		if(browserName.equalsIgnoreCase("chrome")){
 			
-			System.setProperty("webdriver.chrome.driver", "E:\\driver\\chromedriver_win32 (1)\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "E:\\chromedriver_win32\\chromedriver.exe");
 			    driver=new ChromeDriver();	
 		}
 		else if(browserName.equalsIgnoreCase("FF")){
@@ -86,10 +95,17 @@ public class TestBase {
 	
 	@BeforeClass
 	public void setUp() throws InterruptedException, ATUTestRecorderException{
-		 DateFormat dateFormat = new SimpleDateFormat("yy-MM-dd HH-mm-ss");
+		
+		
+		
+		
+		
+		
+		
+		/* DateFormat dateFormat = new SimpleDateFormat("yy-MM-dd HH-mm-ss");
 		 Date date = new Date();
 		 recorder = new ATUTestRecorder("D:\\ScriptVideos","TestVideo-"+dateFormat.format(date),false);
-		 recorder.start(); 
+		 recorder.start(); */
 		initializationBrowser();
 		loginPage= new LoginPage();
 		bdScreen = new BiddingScreen();
@@ -97,10 +113,30 @@ public class TestBase {
     }
 
 	@AfterClass
-	public void tearDown() throws ATUTestRecorderException{
+	public void tearDown(/*ITestResult result*/) throws ATUTestRecorderException{
+	/*	if(result.getStatus()==ITestResult.FAILURE){
+			extentTest.log(LogStatus.FAIL, "TEST CASE FAILED IS "+result.getName()); //to add name in extent report
+			extentTest.log(LogStatus.FAIL, "TEST CASE FAILED IS "+result.getThrowable()); //to add error/exception in extent report
+			
+			String screenshotPath = TestUtil.takeScreenshotAtEndOfTest(driver, result.getName());
+			extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(screenshotPath)); //to add screenshot in extent report
+			//extentTest.log(LogStatus.FAIL, extentTest.addScreencast(screenshotPath)); //to add screencast/video in extent report
+		}
+		else if(result.getStatus()==ITestResult.SKIP){
+			extentTest.log(LogStatus.SKIP, "Test Case SKIPPED IS " + result.getName());
+		}
+		else if(result.getStatus()==ITestResult.SUCCESS){
+			extentTest.log(LogStatus.PASS, "Test Case PASSED IS " + result.getName());
+
+		}
+		
+		
+extent.endTest(extentTest);*/
+		
+		
 		System.out.println("======Browser is shutting down=====\n");
 		 driver.quit();
-		 recorder.stop();
+		// recorder.stop();
     }
 
 }

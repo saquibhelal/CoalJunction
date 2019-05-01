@@ -1,25 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38617" started-at="2019-04-21T14:41:50Z" finished-at="2019-04-21T14:42:29Z">
+  <suite name="Command line suite" duration-ms="78736" started-at="2019-05-01T14:41:02Z" finished-at="2019-05-01T14:42:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38617" started-at="2019-04-21T14:41:50Z" finished-at="2019-04-21T14:42:29Z">
-      <class name="com.qa.testcase.CurrentEMDTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testcase.CurrentEMDTest@239963d8]" name="setUp" is-config="true" duration-ms="21919" started-at="2019-04-21T14:41:50Z" finished-at="2019-04-21T14:42:12Z">
+    <test name="Command line test" duration-ms="78736" started-at="2019-05-01T14:41:02Z" finished-at="2019-05-01T14:42:20Z">
+      <class name="com.qa.testcase.CurrentStatusScreenTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testcase.CurrentStatusScreenTest@17ed40e0]" name="setUp" is-config="true" duration-ms="13313" started-at="2019-05-01T14:41:53Z" finished-at="2019-05-01T14:42:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="currentEMDTest()[pri:0, instance:com.qa.testcase.CurrentEMDTest@239963d8]" name="currentEMDTest" duration-ms="13816" started-at="2019-04-21T14:42:12Z" finished-at="2019-04-21T14:42:26Z">
+        <test-method status="PASS" signature="postVerificationScreenTest()[pri:0, instance:com.qa.testcase.CurrentStatusScreenTest@17ed40e0]" name="postVerificationScreenTest" duration-ms="307" started-at="2019-05-01T14:42:06Z" finished-at="2019-05-01T14:42:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postVerificationScreenTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.testcase.CurrentStatusScreenTest@17ed40e0]" name="tearDown" is-config="true" duration-ms="650" started-at="2019-05-01T14:42:07Z" finished-at="2019-05-01T14:42:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.testcase.CurrentStatusScreenTest -->
+      <class name="com.qa.testcase.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testcase.LoginPageTest@5c0369c4]" name="setUp" is-config="true" duration-ms="13197" started-at="2019-05-01T14:42:07Z" finished-at="2019-05-01T14:42:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.testcase.LoginPageTest@5c0369c4]" name="tearDown" is-config="true" duration-ms="3" started-at="2019-05-01T14:42:20Z" finished-at="2019-05-01T14:42:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="FAIL" signature="loginPageTest(java.lang.String, java.lang.String)[pri:1, instance:com.qa.testcase.LoginPageTest@5c0369c4]" name="loginPageTest" duration-ms="0" started-at="2019-05-01T14:42:20Z" finished-at="2019-05-01T14:42:20Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Cannot inject @Test annotated Method [loginPageTest] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [loginPageTest] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+at org.testng.internal.Parameters.createParameters(Parameters.java:635)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:924)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at com.qa.testcase.TestRunner.main(TestRunner.java:17)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPageTest -->
+      </class> <!-- com.qa.testcase.LoginPageTest -->
+      <class name="com.qa.testcase.BidHistoryTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testcase.BidHistoryTest@d70c109]" name="setUp" is-config="true" duration-ms="13518" started-at="2019-05-01T14:41:31Z" finished-at="2019-05-01T14:41:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="bidHistoryTest()[pri:0, instance:com.qa.testcase.BidHistoryTest@d70c109]" name="bidHistoryTest" duration-ms="7849" started-at="2019-05-01T14:41:44Z" finished-at="2019-05-01T14:41:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bidHistoryTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.testcase.BidHistoryTest@d70c109]" name="tearDown" is-config="true" duration-ms="713" started-at="2019-05-01T14:41:52Z" finished-at="2019-05-01T14:41:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.testcase.BidHistoryTest -->
+      <class name="com.qa.testcase.CurrentEMDTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.testcase.CurrentEMDTest@2be94b0f]" name="setUp" is-config="true" duration-ms="15179" started-at="2019-05-01T14:41:02Z" finished-at="2019-05-01T14:41:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="currentEMDTest()[pri:0, instance:com.qa.testcase.CurrentEMDTest@2be94b0f]" name="currentEMDTest" duration-ms="13310" started-at="2019-05-01T14:41:17Z" finished-at="2019-05-01T14:41:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- currentEMDTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.testcase.CurrentEMDTest@239963d8]" name="tearDown" is-config="true" duration-ms="2826" started-at="2019-04-21T14:42:26Z" finished-at="2019-04-21T14:42:29Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.testcase.CurrentEMDTest@2be94b0f]" name="tearDown" is-config="true" duration-ms="653" started-at="2019-05-01T14:41:30Z" finished-at="2019-05-01T14:41:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.qa.testcase.CurrentEMDTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
 </testng-results>

@@ -29,7 +29,7 @@ public class ProfilePageTest extends TestBase{
 		loginPage.loginOperation(Pro.getProperty("username"),Pro.getProperty("password"));
     }
 	
-	@Test(priority=1)
+	@Test(priority=3)
 	public void userProfileValidateTest() throws InterruptedException{
 		
 		Thread.sleep(4000);
@@ -41,6 +41,11 @@ public class ProfilePageTest extends TestBase{
 	public void profileTest(){
 		prfPage.profilePageCheck();
 		System.out.println("Success");
+	}
+	
+	@Test(priority=1)
+	public void test(){
+		prfPage.TestApp();
 	}
 	
 	@AfterClass

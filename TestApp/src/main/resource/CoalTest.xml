@@ -3,18 +3,27 @@
 <suite thread-count="2" name="Coal Application Automation Test Suite"parallel="classes">
 
 	 <listeners>
-		<listener class-name="com.qa.ExtentReporterListener.ExtentReporterNG" />
+		<listener class-name="com.qa.ExtentReportListner.ExtentReporterNG" />
 	</listeners>
 
-	<test name="CoalTest">
+	<test name="Coal Application Test">
 	
 		<classes>
 			<class name="com.qa.testcases.LoginPageTest"></class>
 			<class name="com.qa.testcases.CurrentEMDTest"></class>	
 			<class name="com.qa.testcases.BidHistoryTest"></class>	
-			<class name="com.qa.testcases.CurrentStatusScreenTest"></class> 		
+			<class name="com.qa.testcases.CurrentStatusScreenTest"></class> 
+			<class name="com.qa.testcases.ProfilePageTest"></class>			
 		</classes>
 		
 	</test>
 	
 </suite>
+
+
+
+
+
+
+
+

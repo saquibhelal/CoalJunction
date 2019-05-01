@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.qa.base.HighLightElement;
 import com.qa.base.TestBase;
@@ -134,5 +135,20 @@ public class LoginPage extends TestBase {
 		return xyz;
 	}
 		*/
+	
+	
+	public void tansactionPasswordValidation(String usNm,String ps){
+		userName.sendKeys(usNm);
+		pass.sendKeys(ps);
+		submitBtn.click();
+		bidingLink.click();
+		tranPas.sendKeys("password5");
+		
+	}
+
+	
+	
+	
+	
 	
 }

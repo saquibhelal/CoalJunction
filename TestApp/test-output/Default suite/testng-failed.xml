@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.testcase.BiddingScreenTest">
+      <class name="com.qa.testcase.TransactionPaswdTest">
         <methods>
-          <include name="biddingScreenTest"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="appTest"/>
         </methods>
-      </class> <!-- com.qa.testcase.BiddingScreenTest -->
+      </class> <!-- com.qa.testcase.TransactionPaswdTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -3,6 +3,7 @@ package com.qa.testcase;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.qa.base.TestBase;
@@ -34,11 +35,13 @@ public class LoginPageTest extends TestBase{
 		boolean result = loginPage.validateError("password2");
 		Assert.assertEquals(result, true);
 	}*/
-	@Test
-	public void loginPageTest(){
-		//loginPage.biddingLinkOp();
+    //@Parameters("browser")
+	@Test(priority=1)
+	public void loginPageTest(String un,String pass){
 		
-		/*loginPage.loginOperation(Pro.getProperty("username"), Pro.getProperty("password"));*/
+		loginPage.tansactionPasswordValidation(un, pass);
+		String actualMsg=System.getProperty("TransactionPasswordMsg");
+		Assert.assertEquals(actualMsg, true);
 	}
 	
 	@AfterClass
